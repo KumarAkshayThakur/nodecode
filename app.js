@@ -14,7 +14,7 @@ console.log('Exact name: ' + process.env.ORA_INSTANCE_NAME);
 function runGetRequest() {
     
     //sample URL.
-    var url = "http://140.86.15.104:3000/fighters/45/1/pink/KumarAkshayThakur";
+    var url = "http://140.86.15.104:3000/reactorCore/320/650/pink/KumarAkshayThakur";
     request(url, function(error, response, body) {
         if(!error) {
             console.log(body);
