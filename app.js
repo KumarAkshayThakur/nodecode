@@ -1,7 +1,7 @@
 var express = require('express');
 var request = require('request');
 var mysql = require('mysql');
-var connection = connectToDatabase('myHost', 'myUser', 'myPassword', 'myDatabase');
+var connection = connectToDatabase('140.86.15.104', 'Captain', 'welcome1', 'deathstar');
 
 var app = express();
 // Akshay's microservice!
@@ -14,7 +14,7 @@ console.log('Exact name: ' + process.env.ORA_INSTANCE_NAME);
 function runGetRequest() {
     
     //sample URL.
-    var url = "http://ip.jsontest.com/";
+    var url = "http://140.86.15.104:3000/fighters/45/1/pink/KumarAkshayThakur";
     request(url, function(error, response, body) {
         if(!error) {
             console.log(body);
@@ -26,7 +26,7 @@ function runGetRequest() {
 
 //Executes a SQL query
 function runDatabaseQuery() {
-    connection.query("SELECT * FROM SampleTable", function(error, rows, fields) {
+    connection.query("SELECT * FROM SecretTable", function(error, rows, fields) {
         if(!error) {
             console.log(rows);
         } else {
